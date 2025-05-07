@@ -21,46 +21,99 @@ x6 = -1
 """1.2 What is the difference between variables x1 and x3?"""
 
 # type(x1)
+# x1 is a float (numeric), while x3 is a string representing a number
+# This means x1 can be used in arithmetic operations, x3 needs conversion first
+print(type(x1))  # float
+print(type(x3))  # str
+
 
 
 
 """1.3 What happens if you subtract x3 from x1?"""
 
+# This will raise a TypeError because you cannot subtract a string from a float
 
 
 """1.4 What is the difference between variables x4 and x5?"""
 
+# x4 is a boolean (True), x5 is a string "True"
+print(type(x4))  # bool
+print(type(x5))  # str
 
 
 
 
 """1.5 What happens if you subtract x5 from x4?"""
 
+# This will raise a TypeError again because you can't subtract string from boolean
 
 
 """2.1 To gather input from the user, we can use the function input(message), where “message” is a meaningful message of type str and will be displayed to the user."""
 
+ x1 = input("Enter a number: ")
+x2 = input("Enter another number: ")
 
+# Simulated user input as strings
+x1 = "5"
+x2 = "8"
+
+print("x1 =", x1)
+print("x2 =", x2)
+
+# Convert strings to integers
+x1 = int(x1)
+x2 = int(x2)
 
 """Question 1: Print the values of the two variables? As you might have noticed, data type of x1 and x2 is string. Even though we entered integers, the input function converts them into string by default. Now we do some data type conversion from string to integers:"""
 
+x1 = "5"
+x2 = "8"
+
+print("x1 =", x1)
+print("x2 =", x2)
+
+x1 = int(x1)
+x2 = int(x2)
 
 
-"""Question 2: What is the data type of x1 and x2? Now perform simple comparisons between x1 and x2:
+"""Question 2: What is the data type of x1 and x2? Now perform simple comparisons between x1 and x2:"""
 
-Check if the two variables are equal?
+print("Data type of x1:", type(x1))  # int
+print("Data type of x2:", type(x2))  # int
 
-Check if x1 is greater than x2?
 
-Check if x2 is greater than x1?
 
-Check if x1 is not equal to x2?
 
-Store the difference between the two variables x1 and x2 in another variable x3 (subtract the smaller number from the larger number).
 
-Increment the smaller of the two variables (x1 and x2) with the difference.Use the shorthand addition operator for the same. Again check if x1 and x2 are equal or not?
-"""
 
+
+"""Check if the two variables are equal?"""
+
+print("Are x1 and x2 equal?", x1 == x2)
+
+"""Check if x1 is greater than x2?"""
+
+print("Is x1 greater than x2?", x1 > x2)
+
+"""Check if x2 is greater than x1?"""
+
+print("Is x2 greater than x1?", x2 > x1)
+
+"""Check if x1 is not equal to x2?"""
+print("Is x1 not equal to x2?", x1 != x2)
+
+"""Store the difference between the two variables x1 and x2 in another variable x3 (subtract the smaller number from the larger number)."""
+x3 = abs(x1 - x2)
+print("Difference between x1 and x2 (x3):", x3)
+
+"""Increment the smaller of the two variables (x1 and x2) with the difference.Use the shorthand addition operator for the same. Again check if x1 and x2 are equal or not?"""""
+
+if x1 < x2:
+    x1 += x3
+else:
+    x2 += x3
+    
+print("After increment, are x1 and x2 equal?", x1 == x2)
 
 
 
